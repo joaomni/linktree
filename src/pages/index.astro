@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SvgFb from '../components/SvgFb.astro';
+import SvgInsta from '../components/SvgInsta.astro';
+import SvgWhats from '../components/SvgWhats.astro';
+---
+
+<Layout title="Baby Beef Jardim - Jantar Especial Namorados">
+	<div class="w-[580px] my-0 mx-auto text-center pt-16 pb-8 px-4">
+		<header class="flex flex-col items-center gap-2">
+			<img class="bg-black mb-4 rounded-full w-[96px] h-[96px] object-contain p-1" src="/assets/logo_baby_beef_jardim.webp" width="96px" height="96px" alt="Logo Baby Beef Jardim">
+			<h1 class="font-bold text-xl">Restaurante Baby Beef Jardim</h1>
+			<h2 class="text-base font-normal w-[400px]">Venha viver uma noite especial no Jantar de Namorados do Baby Beef Jardim! Dia 12 de Junho</h2>
+
+			<div class="flex gap-4 mt-4">
+				<a href="https://www.facebook.com/babybeefjardim/" target="_blank">
+					<SvgFb class="hover:w-[38px]"/>
+				</a>
+				<a href="https://www.instagram.com/babybeefjardim/" target="_blank">
+					<SvgInsta />
+				</a>
+				<a href="https://api.whatsapp.com/send?phone=5511985540692&text=Ol%C3%A1!%20Vi%20seu%20an%C3%BAncio%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank">
+					<SvgWhats />
+				</a>
+			</div>
+		</header>
+		<main class="mt-8">
+			<button data-btn-whats  class="rounded-[30px] w-full h-auto min-h-16 px-11 bg-white text-[#0D1A15] border-2 border-solid border-white transition hover:bg-transparent hover:text-white">
+				<span class="text-base font-normal">Informações e Reservas</span>
+			</button>
+		</main>
+	</div>
+
+	<footer class="flex flex-col items-center justify-center mb-8">
+		<article class="flex gap-4 mt-8">
+			<img class="hover:w-[200px]" src="/assets/gallery/1.png" width="150" height="150" alt="">
+			<img class="hover:w-[200px]" src="/assets/gallery/3.png" width="150" height="150" alt="">
+			<img class="hover:w-[200px]" src="/assets/gallery/4.png" width="150" height="150" alt="">
+			<img class="hover:w-[200px]" src="/assets/gallery/5.png" width="150" height="150" alt="">
+		</article>
+		<article class="flex gap-4 mt-8">
+			<img class="hover:w-[200px]" src="/assets/gallery/6.png" width="150" height="150" alt="">
+			<img class="hover:w-[200px]" src="/assets/gallery/7.png" width="150" height="150" alt="">
+			<img class="hover:w-[200px]" src="/assets/gallery/8.png" width="150" height="150" alt="">
+			<img class="hover:w-[200px]" src="/assets/gallery/9.png" width="150" height="150" alt="">
+		</article>
+		<article class="flex gap-4 mt-8">
+			<img class="hover:w-[200px]" src="/assets/gallery/10.png" width="150" height="150" alt="">
+			<img class="hover:w-[200px]" src="/assets/gallery/11.png" width="150" height="150" alt="">
+			<img class="hover:w-[200px]" src="/assets/gallery/12.png" width="150" height="150" alt="">
+			<img class="hover:w-[200px]" src="/assets/gallery/13.png" width="150" height="150" alt="">
+		</article>
+	</footer>
+</Layout>
+
+<script>
+	const link = 'https://api.whatsapp.com/send?phone=5511985540692&text=Ol%C3%A1!%20Vi%20seu%20an%C3%BAncio%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.'
+
+  const botoes = document.querySelectorAll('[data-btn-whats]');
+
+  botoes.forEach((botao) => {
+    botao.addEventListener('click', () => window.open(link, '_blank'))
+  })
+</script>
